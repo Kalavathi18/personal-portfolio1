@@ -1,0 +1,6 @@
+# Ignore environment variables and sensitive data
+.env
+config.js 
+personalportfolio/kalavathi.pdf
+personalportfolio/mypic.jpeg
+*.log

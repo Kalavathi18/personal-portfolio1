@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalavathi | Tech Enthusiast & Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-name"><h1>Kalavathi S</h1></div>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#education">Education</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm <span style="color: var(--primary-color)">Kalavathi S</span></h1>
+                <div class="open-to-work">
+                    <i class="fas fa-briefcase"></i> Open to Work
+                </div>
+                <p class="job-titles">Java Developer | Full Stack Developer | Frontend Developer</p>
+                <p class="hero-description">A passionate software developer with a fresh perspective and strong foundation in full-stack development. Committed to crafting clean, efficient code and building innovative solutions that make a difference. Ready to bring my technical expertise and creative problem-solving skills to your next project.</p>
+                <div class="hero-highlights">
+                    <span><i class="fas fa-check-circle"></i> Full Stack Development</span>
+                    <span><i class="fas fa-check-circle"></i> Problem Solving</span>
+                    <span><i class="fas fa-check-circle"></i> Clean Code</span>
+                </div>
+                <div class="hero-bottom">
+                    <div class="social-links">
+                        <a href="mailto:kalavathi27145@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/Kalavathi18" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/kalavathisks" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="kalavathi.pdf" download class="download-resume">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+            <img src="mypic.jpeg" alt="Your Photo" class="profile-img">
+        </div>
+    </section>
+
+    <div class="quote-section">
+        <blockquote>
+            <!-- Quote will be inserted here by JavaScript -->
+        </blockquote>
+    </div>
+
+    <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <div class="card">
+            <div class="about-content">
+                <p class="about-intro">
+                    <span class="highlight">MCA Graduate 2024</span> | 
+                    <span class="highlight">Java Full Stack Developer</span>
+                </p>
+                <p class="about-description">
+                    A passionate <span class="highlight-text">Java Full Stack Developer</span> with strong foundation in software development and problem-solving. Completed MCA with distinction from T John College, specializing in <span class="highlight-text">Java, Spring Framework, and Web Technologies</span>. Proven ability to create efficient solutions through academic projects and hands-on development experience.
+                </p>
+                <div class="tech-focus">
+                    <h4><i class="fas fa-laptop-code"></i> Technical Focus</h4>
+                    <div class="tech-focus-grid">
+                        <div class="tech-focus-item">
+                            <i class="fas fa-server"></i>
+                            <span>Backend Development with Java, Spring Boot, and Hibernate</span>
+                        </div>
+                        <div class="tech-focus-item">
+                            <i class="fas fa-code"></i>
+                            <span>Frontend Development with React.js, HTML5, CSS3</span>
+                        </div>
+                        <div class="tech-focus-item">
+                            <i class="fas fa-database"></i>
+                            <span>Database Management with MySQL and PostgreSQL</span>
+                        </div>
+                        <div class="tech-focus-item">
+                            <i class="fas fa-tools"></i>
+                            <span>Development Tools: Git, Maven, Docker</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="career-focus">
+                    <h4><i class="fas fa-rocket"></i> Career Objectives</h4>
+                    <p>Actively seeking opportunities in:</p>
+                    <ul class="animated-list">
+                        <li><i class="fas fa-check-circle"></i> Java Development - Building scalable enterprise applications</li>
+                        <li><i class="fas fa-check-circle"></i> Full Stack Development - Creating end-to-end web solutions</li>
+                        <li><i class="fas fa-check-circle"></i> Software Engineering - Contributing to innovative projects</li>
+                    </ul>
+                </div>
+                <div class="achievements">
+                    <h4><i class="fas fa-trophy"></i> Key Achievements</h4>
+                    <ul class="animated-list">
+                        <li><i class="fas fa-star"></i> Academic Excellence: 8.37 CGPA in MCA (2024)</li>
+                        <li><i class="fas fa-star"></i> College Topper: 9.34 CGPA in B.Sc (2022)</li>
+                        <li><i class="fas fa-star"></i> LeetCode 50-Day Coding Streak Badge</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <h2 class="section-title">How I Can Help You</h2>
+        <div class="cards-grid">
+            <div class="service-card card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Java Development</h3>
+                <p>Building robust and scalable backend solutions using Java and its ecosystem.</p>
+                <ul class="service-list">
+                    <li><i class="fas fa-check"></i> Enterprise Java Applications</li>
+                    <li><i class="fas fa-check"></i> RESTful Web Services</li>
+                    <li><i class="fas fa-check"></i> Database Integration</li>
+                    <li><i class="fas fa-check"></i> API Development</li>
+                </ul>
+            </div>
+
+            <div class="service-card card">
+                <div class="service-icon">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <h3>Full Stack Development</h3>
+                <p>End-to-end application development from concept to deployment.</p>
+                <ul class="service-list">
+                    <li><i class="fas fa-check"></i> Web Application Development</li>
+                    <li><i class="fas fa-check"></i> Database Design</li>
+                    <li><i class="fas fa-check"></i> API Integration</li>
+                    <li><i class="fas fa-check"></i> Full System Architecture</li>
+                </ul>
+            </div>
+
+            <div class="service-card card">
+                <div class="service-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>Frontend Development</h3>
+                <p>Creating responsive and interactive user interfaces.</p>
+                <ul class="service-list">
+                    <li><i class="fas fa-check"></i> Responsive Web Design</li>
+                    <li><i class="fas fa-check"></i> UI/UX Implementation</li>
+                    <li><i class="fas fa-check"></i> Interactive Features</li>
+                    <li><i class="fas fa-check"></i> Cross-browser Compatibility</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <h3>Master of Computer Applications (MCA)</h3>
+                <p><i class="fas fa-university"></i> T John College</p>
+                <p><i class="fas fa-calendar-alt"></i> 2022 - 2024</p>
+                <p><i class="fas fa-star"></i> CGPA: 8.37</p>
+                <p class="education-details">Advanced studies in computer applications with focus on software development and modern technologies.</p>
+            </div>
+            <div class="card">
+                <h3>Bachelor of Science (B.Sc)</h3>
+                <p><i class="fas fa-university"></i> St. Francis De Sales College</p>
+                <p><i class="fas fa-calendar-alt"></i> 2019 - 2022</p>
+                <p><i class="fas fa-star"></i> CGPA: 9.34</p>
+                <p class="education-details">Strong foundation in science with exceptional academic performance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <h3><i class="fas fa-code"></i> Frontend Development</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-server"></i> Backend Development</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Advanced Java</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Spring</span>
+                    <span class="skill-tag">Spring MVC</span>
+                    <span class="skill-tag">Spring Boot</span>
+                    <span class="skill-tag">Hibernate</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-database"></i> Databases</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">Docker</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-container">
+            <!-- 1. MoneyMagnet Wallet -->
+            <div class="project-card">
+                <div class="project-preview">
+                    <img src="moneymagnet.PNG" alt="MoneyMagnet Wallet" class="project-preview-img">
+                    <h3>MoneyMagnet Wallet</h3>
+                </div>
+                <div class="project-details">
+                    <h3>MoneyMagnet Wallet</h3>
+                    <p class="project-description">
+                        A secure digital wallet system built with web technologies, enabling seamless financial transactions with robust security features. Implemented user authentication, email verification, and secure payment gateway integration.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">JSP</span>
+                        <span class="tech-tag">Hibernate</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Servlets</span>
+                    </div>
+                    <div class="project-features">
+                        <p><i class="fas fa-check-circle"></i> Secure transaction processing with encryption</p>
+                        <p><i class="fas fa-check-circle"></i> Two-factor authentication system</p>
+                        <p><i class="fas fa-check-circle"></i> Real-time transaction notifications</p>
+                        <p><i class="fas fa-check-circle"></i> User-friendly dashboard interface</p>
+                    </div>
+                    <a href="https://github.com/kalavathi18/money-magnet-wallet1" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 2. Personal Portfolio -->
+            <div class="project-card">
+                <div class="project-preview">
+                    <img src="portfolio.PNG" alt="Portfolio Website" class="project-preview-img">
+                    <h3>Personal Portfolio</h3>
+                </div>
+                <div class="project-details">
+                    <h3>Personal Portfolio</h3>
+                    <p class="project-type">Web Development</p>
+                    <p class="project-description">
+                        A modern, responsive portfolio website showcasing my projects and skills. Features dark/light theme, smooth animations, and contact form integration.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">EmailJS</span>
+                    </div>
+                    <div class="project-features">
+                        <p><i class="fas fa-check-circle"></i> Responsive design for all devices</p>
+                        <p><i class="fas fa-check-circle"></i> Dark/Light theme toggle</p>
+                        <p><i class="fas fa-check-circle"></i> Interactive project showcase</p>
+                        <p><i class="fas fa-check-circle"></i> Integrated contact form</p>
+                    </div>
+                    <a href="https://github.com/kalavathi18/portfolio" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 3. Women Safety App -->
+            <div class="project-card">
+                <div class="project-preview">
+                    <img src="women.png" alt="Women Safety App" class="project-preview-img">
+                    <h3>Women Safety App</h3>
+                </div>
+                <div class="project-details">
+                    <h3>Women Safety App</h3>
+                    <p class="project-description">
+                        A comprehensive web application focused on women's safety, providing emergency assistance, real-time location tracking, and immediate response features for crisis situations.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Bootstrap</span>
+                    </div>
+                    <div class="project-features">
+                        <p><i class="fas fa-check-circle"></i> One-click emergency alert system</p>
+                        <p><i class="fas fa-check-circle"></i> Real-time location sharing</p>
+                        <p><i class="fas fa-check-circle"></i> Emergency contact management</p>
+                        <p><i class="fas fa-check-circle"></i> Safety resource directory</p>
+                    </div>
+                    <a href="https://github.com/kalavathi18/women-safety-app" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 4. To-Do List -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="todolist.png" alt="To-Do List">
+                    <h3>To-Do List</h3>
+                </div>
+                <div class="project-details">
+                    <h3>To-Do List</h3>
+                    <p class="project-type">Java Project</p>
+                    <p class="project-description">
+                        Created a Java-based task management application with CRUD operations and data persistence. Implemented priority-based task organization.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">File I/O</span>
+                        <span class="tech-tag">OOP</span>
+                    </div>
+                    <div class="project-achievements">
+                        <p><i class="fas fa-check-circle"></i> Developed full CRUD functionality for task management</p>
+                        <p><i class="fas fa-check-circle"></i> Implemented task prioritization system</p>
+                        <p><i class="fas fa-check-circle"></i> Added data persistence using file handling</p>
+                    </div>
+                    <a href="https://github.com/kalavathi18/to-do-list18" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 5. Tic Tac Toe Game -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="tictactoe.png" alt="Tic Tac Toe Game">
+                    <h3>Tic Tac Toe Game</h3>
+                </div>
+                <div class="project-details">
+                    <h3>Tic Tac Toe Game</h3>
+                    <p class="project-type">Java Project</p>
+                    <p class="project-description">An interactive Tic Tac Toe game implementation showcasing Java programming skills and game logic.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Game Development</span>
+                    </div>
+                    <a href="https://github.com/kalavathi18/tic-tac-toe18" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 6. Secure Key Generator -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="key.jpeg" alt="Secure Key Generator">
+                    <h3>Secure Key Generator</h3>
+                </div>
+                <div class="project-details">
+                    <h3>Secure Key Generator</h3>
+                    <p class="project-type">Web Project</p>
+                    <p class="project-description">A web-based tool for generating secure keys, demonstrating frontend development skills.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <a href="https://github.com/kalavathi18/secure-key-generator18" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="card contact-card">
+            <div class="contact-grid">
+                <!-- Social Links -->
+                <div class="social-links-container">
+                    <h3><i class="fas fa-paper-plane"></i> Let's Connect!</h3>
+                    <div class="contact-quote">
+                        <p>"Great things in business are never done by one person. They're done by a team of people."</p>
+                        <span>- Steve Jobs</span>
+                    </div>
+                    <p class="connection-message">
+                        Feel free to reach out! You can contact me through the form or connect via social media:
+                    </p>
+                    <div class="social-links">
+                        <a href="mailto:kalavathi27145@gmail.com" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://github.com/kalavathi18" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kalavathisks" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <form onsubmit="submitForm(event)">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            Let's Connect <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2024 Kalavathi S. All rights reserved.</p>
+            <p class="footer-quote">Building digital experiences with passion and purpose</p>
+        </div>
+    </footer>  
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
