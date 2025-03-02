@@ -43,34 +43,13 @@ document.querySelector('form').addEventListener('submit', submitForm);
 
 // Array of professional programming quotes
 const quotes = [
-    {
-        text: "First, solve the problem. Then, write the code.",
-        author: "John Johnson"
-    },
-    {
-        text: "Clean code always looks like it was written by someone who cares.",
-        author: "Robert C. Martin"
-    },
-    {
-        text: "Programming isn't about what you know; it's about what you can figure out.",
-        author: "Chris Pine"
-    },
-    {
-        text: "The best way to predict the future is to implement it.",
-        author: "David Heinemeier Hansson"
-    },
-    {
-        text: "Make it work, make it right, make it fast.",
-        author: "Kent Beck"
-    },
-    {
-        text: "Simplicity is the soul of efficiency.",
-        author: "Austin Freeman"
-    },
-    {
-        text: "Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.",
-        author: "Patrick McKenzie"
-    }
+    { text: "First, solve the problem. Then, write the code.", author: "John Johnson" },
+    { text: "Clean code always looks like it was written by someone who cares.", author: "Robert C. Martin" },
+    { text: "Programming isn't about what you know; it's about what you can figure out.", author: "Chris Pine" },
+    { text: "The best way to predict the future is to implement it.", author: "David Heinemeier Hansson" },
+    { text: "Make it work, make it right, make it fast.", author: "Kent Beck" },
+    { text: "Simplicity is the soul of efficiency.", author: "Austin Freeman" },
+    { text: "Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.", author: "Patrick McKenzie" }
 ];
 
 // Function to get a random quote
@@ -83,7 +62,7 @@ function getRandomQuote() {
 function updateQuote() {
     const quoteElement = document.querySelector('.quote-section blockquote');
     if (quoteElement) {
-        // Add fade-out effect
+        // Fade out
         quoteElement.style.opacity = '0';
         
         setTimeout(() => {
@@ -92,18 +71,19 @@ function updateQuote() {
                 "${quote.text}"
                 <footer>- ${quote.author}</footer>
             `;
-            // Add fade-in effect
+            // Fade in
             quoteElement.style.opacity = '1';
-        }, 500); // Wait for fade out to complete
+        }, 500); // Wait for fade-out to complete
     }
 }
 
 // Initialize quote when page loads
 document.addEventListener('DOMContentLoaded', () => {
     updateQuote();
-    // Change quote every 3 seconds
-    setInterval(updateQuote, 3000);
+    // Change quote every 5 seconds for better readability
+    setInterval(updateQuote, 5000);
 });
+
 
 // Add this to your existing script.js or in a script tag
 function updateProjectDots() {
