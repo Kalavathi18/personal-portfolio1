@@ -1,45 +1,3 @@
-// // Initialize EmailJS
-// (function() {
-//     emailjs.init("UGNxgZtksw4KMYJ3k");
-// })();
-
-// // Form submission function
-// function submitForm(event) {
-//     event.preventDefault();
-    
-//     const submitButton = document.querySelector('.submit-btn');
-//     const originalText = submitButton.innerHTML;
-//     submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-//     submitButton.disabled = true;
-
-//     const templateParams = {
-//         to_name: 'Kalavathi S',
-//         from_name: document.getElementById('name').value,
-//         from_email: document.getElementById('email').value,
-//         message: document.getElementById('message').value,
-//     };
-
-//     emailjs.send('service_hpebmua', 'template_9trwunv', templateParams)
-//         .then(function(response) {
-//             if (response.status === 200) {
-//                 alert('Thank you for your message! I will get back to you soon.');
-//                 document.querySelector('form').reset();
-//             } else {
-//                 throw new Error('Failed to send message');
-//             }
-//         })
-//         .catch(function(error) {
-//             console.error('FAILED...', error);
-//             alert('Oops! Something went wrong. Please try again later.');
-//         })
-//         .finally(function() {
-//             submitButton.innerHTML = originalText;
-//             submitButton.disabled = false;
-//         });
-// }
-
-
-
 // Initialize EmailJS
 (function() {
     emailjs.init(config.emailjs.publicKey);
@@ -82,16 +40,6 @@ function submitForm(event) {
 
 // Attach submitForm to form submit event
 document.querySelector('form').addEventListener('submit', submitForm);
-
-
-// Add this to ensure the theme is set correctly on page load
-document.addEventListener('DOMContentLoaded', function() {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (prefersDark) {
-        document.body.setAttribute('data-theme', 'dark');
-        document.querySelector('.theme-toggle i').classList.replace('fa-sun', 'fa-moon');
-    }
-});
 
 // Array of professional programming quotes
 const quotes = [
@@ -210,39 +158,39 @@ function updateProjectDots() {
     cards.forEach(card => observer.observe(card));
 }
 
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', updateProjectDots);
-const projectsContainer = document.querySelector('.projects-container');
-const dots = document.querySelectorAll('.dot');
+// Add theme toggle function
+function toggleTheme() {
+    const body = document.body;
+    const themeIcon = document.querySelector('.theme-toggle i');
+    
+    console.log('Toggle clicked');
+    
+    // Simple toggle
+    if (body.getAttribute('data-theme') === 'dark') {
+        // Switch to light theme
+        body.removeAttribute('data-theme');
+        themeIcon.className = 'fas fa-sun';
+    } else {
+        // Switch to dark theme
+        body.setAttribute('data-theme', 'dark');
+        themeIcon.className = 'fas fa-moon';
+    }
+    
+    // Log the current state
+    console.log('Current theme:', body.getAttribute('data-theme'));
+    console.log('Current icon:', themeIcon.className);
+}
 
-projectsContainer.addEventListener('scroll', () => {
-    const scrollPosition = projectsContainer.scrollLeft;
-    const cardWidth = projectsContainer.querySelector('.project-card').offsetWidth;
-    const activeIndex = Math.round(scrollPosition / (cardWidth + 32)); // 32 is the gap
-
-    dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === activeIndex);
-    });
-});
-
-// Add click handling for the dots
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        const cardWidth = projectsContainer.querySelector('.project-card').offsetWidth;
-        projectsContainer.scrollTo({
-            left: index * (cardWidth + 32),
-            behavior: 'smooth'
-        });
-    });
-});
-
-// DOM Content Loaded Event Listeners
+// Single consolidated DOMContentLoaded event listener
 document.addEventListener('DOMContentLoaded', function() {
-    // Theme initialization
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (prefersDark) {
-        document.body.setAttribute('data-theme', 'dark');
-        document.querySelector('.theme-toggle i').classList.replace('fa-sun', 'fa-moon');
+    // Remove onclick attribute if it exists
+    const themeToggle = document.querySelector('.theme-toggle');
+    if (themeToggle) {
+        themeToggle.removeAttribute('onclick');
+        themeToggle.addEventListener('click', toggleTheme);
+        console.log('Theme toggle initialized');
+    } else {
+        console.error('Theme toggle button not found');
     }
 
     // Initialize quotes
@@ -251,4 +199,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize project dots
     updateProjectDots();
+
+    // Initialize project container scroll behavior
+    const projectsContainer = document.querySelector('.projects-container');
+    const dots = document.querySelectorAll('.dot');
+
+    projectsContainer.addEventListener('scroll', () => {
+        const scrollPosition = projectsContainer.scrollLeft;
+        const cardWidth = projectsContainer.querySelector('.project-card').offsetWidth;
+        const activeIndex = Math.round(scrollPosition / (cardWidth + 32));
+
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === activeIndex);
+        });
+    });
+
+    // Add click handling for the dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            const cardWidth = projectsContainer.querySelector('.project-card').offsetWidth;
+            projectsContainer.scrollTo({
+                left: index * (cardWidth + 32),
+                behavior: 'smooth'
+            });
+        });
+    });
 });
