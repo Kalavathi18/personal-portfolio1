@@ -52,4 +52,140 @@ nav {
 
 .theme-toggle:hover {
     opacity: 0.8;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    /* Navigation */
+    nav {
+        padding: 10px;
+    }
+
+    .nav-links {
+        display: none; /* Hide regular nav links on mobile */
+    }
+
+    .nav-name h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Mobile menu button */
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    /* Sections padding */
+    section {
+        padding: 40px 20px;
+    }
+
+    /* Projects */
+    .projects-container {
+        padding: 10px;
+    }
+
+    .project-card {
+        min-width: 280px; /* Smaller cards on mobile */
+        margin: 10px;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 20px;
+    }
+
+    /* Contact form */
+    .contact-form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    input, textarea {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    /* Skills */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+        gap: 15px;
+    }
+
+    /* Education */
+    .education-timeline {
+        padding: 0 15px;
+    }
+
+    .timeline-item {
+        margin-left: 15px;
+    }
+
+    /* Quote section */
+    .quote-section {
+        padding: 20px;
+    }
+
+    .quote-section blockquote {
+        font-size: 1rem;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .nav-name h1 {
+        font-size: 1.2rem;
+    }
+
+    .project-card {
+        min-width: 240px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Add smooth scrolling for better mobile experience */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Improve touch targets for mobile */
+button, 
+a {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px;
+}
+
+/* Fix for mobile hover states */
+@media (hover: none) {
+    .project-card:hover,
+    .service-card:hover,
+    button:hover {
+        transform: none;
+    }
+}
+
+/* Improve form elements on mobile */
+input, 
+textarea, 
+button {
+    font-size: 16px; /* Prevents zoom on mobile */
+}
+
+/* Add momentum scrolling for containers */
+.projects-container,
+.skills-grid {
+    -webkit-overflow-scrolling: touch;
 } 
